@@ -1,0 +1,58 @@
+@use './mixins' as m;
+@use './variables' as v;
+@use './colors' as c;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  // cursor: none;
+}
+::-webkit-scrollbar {
+  width: 0.9rem !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(160, 160, 160);
+  border-radius: 0.8rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 70%;
+  @include m.media(sm) {
+    font-size: 37.51%;
+  }
+  @include m.media(md) {
+    font-size: 44%;
+  }
+  @include m.media(lg) {
+    font-size: 56.25%;
+  }
+  @include m.media(xlg) {
+    font-size: 64.5%;
+  }
+}
+body {
+  font-family: v.$main-font;
+  // background: #000000;
+  color: c.$dominant;
+  // @include flex(center);
+}
+a {
+  color: c.$dominant;
+}
+span {
+  color: c.$dominant;
+  font-weight: 700;
+}
+header {
+  @include m.media(xxlg) {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+  }
+}
