@@ -1,0 +1,29 @@
+footer{
+  background-color: #90D4C5;
+  @include flex(center);
+  flex-direction: column;
+  padding: 7rem 0;
+.logo{
+  color: $dark__blue;
+  height:5.2rem;
+}
+  .links{
+    padding: 7.3rem 0 10rem 0;
+    a{
+      font-family: $body__font;
+      margin: 0 3rem;
+      color: $moderate__cyan;
+      font-size: 2.2rem;
+      @include media(sm){
+        font-size: 2.8rem;
+      }
+    }
+  }
+  .icons{
+    padding: 2rem 0;
+    @include flex(center);
+    .icon{
+      padding: 0 1.21rem;
+    }
+  }
+}

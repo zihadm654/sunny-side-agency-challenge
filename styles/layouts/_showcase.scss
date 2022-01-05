@@ -1,0 +1,37 @@
+.showcase{
+  @include grid();
+  gap: 0;
+  .case{
+    @include media(sm){
+      grid-column: span 6;
+      height: 30rem;
+    }
+    grid-column: span 3;
+    height: 50rem;
+    width: 100%;
+  }
+  .milkbottles{
+    background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .orange{
+    background-image: url("/images/desktop/image-gallery-orange.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .cone{
+    background-image: url("/images/desktop/image-gallery-cone.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .sugarcubes{
+    background-image: url("/images/desktop/image-gallery-sugarcubes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

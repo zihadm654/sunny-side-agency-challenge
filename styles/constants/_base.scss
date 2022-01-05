@@ -1,0 +1,43 @@
+
+*,
+*::after,
+*::before {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 55.5%;
+  @include media(sm) {
+    font-size: 40.5%;
+  }
+  @include media(md) {
+    font-size: 42.5%;
+  }
+  @include media(lg) {
+    font-size: 45.5%;
+  }
+  @include media(xxlg) {
+    font-size: 68.5%;
+  }
+}
+body {
+  font-family: $main__font;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+span {
+  color: $white;
+  font-weight: 700;
+}
+nav {
+  @include media(xxlg) {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}

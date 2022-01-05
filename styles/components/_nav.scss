@@ -1,0 +1,52 @@
+.nav {
+  @include media(sm){
+    padding: 4.5rem 3.5rem;
+  }
+  padding: 3rem 6rem;
+  @include flex(space-between);
+  &__left{
+    img{
+      @include media(sm){
+        height: 3rem;
+      }
+      height: 3.4rem;
+    }
+  }
+  &__right{
+    .menu{
+      @include media(sm){
+        display: block;
+      }
+      display: none;
+    }
+    .links{
+      @include media(sm){
+          display: none;
+      }
+      @include flex(space-between);
+      li{
+        &:hover{
+          cursor: pointer;
+        }
+        list-style: none;
+        padding: 0 2.8rem;
+        a{
+          font-size: $sm;
+          font-family: $body__font;
+          color: $white;
+          text-decoration: none;
+        }
+      }
+      button{
+        cursor: pointer;
+        margin-left: 1rem;
+        font-weight: 700;
+        font-family: $main__font;
+        background-color: $white;
+        border: none;
+        border-radius: 2rem;
+        padding: 1.5rem 2.5rem;
+      }
+    }
+  }
+}

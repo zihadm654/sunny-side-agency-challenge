@@ -1,0 +1,156 @@
+.projects{
+  overflow: hidden;
+  @include grid();
+  grid-gap: 0;
+  .item{
+    @include flex(center);
+    @include media(sm){
+      flex-direction: column;
+      height: 100vh;
+    }
+    height: 85vh;
+    grid-column: 1/13;
+    overflow: hidden;
+  }
+  .transform{
+    &__left{
+      flex: .5;
+        @include media(sm){
+          text-align: center;
+          padding: 4.5rem 2.5rem;
+          order: 2;
+        }
+        .content{
+          @include media(sm){
+            padding: 5rem 4rem;
+          }
+          padding: 2rem 10rem 2rem 16rem;
+          h3{
+            color: $dull__blue;
+            font-size: $xlr;
+            font-weight: 900;
+          }
+          p{
+            @include media(sm){
+              font-size: 2.52rem;
+            }
+            padding: 3.2rem 0;
+            font-size: 2rem;
+            font-family: $body__font;
+            color: $dark__grayish__blue;
+            line-height: 1.66;
+            margin-bottom: 1.5rem;
+          }
+          button{
+            border: none;
+            background: none;
+          }
+        }
+      }
+      &__right{
+        @include media(sm){
+        background-image: url("./images/mobile/image-transform.jpg");
+
+        }
+        flex: .5;
+        order: 1;
+        background-image: url("./images/desktop/image-transform.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        background-size: 100% 100% ,100% 100%;
+        background-position: 50% 50%, 0% 0%;
+      }
+  }
+  .stand__out{
+    &__right{
+      flex: .5;
+        @include media(sm){
+          text-align: center;
+          padding: 4.5rem 2.5rem;
+          order: 2;
+        }
+        order: 1;
+        .content{
+          @include media(sm){
+            padding: 5rem 4rem;
+          }
+          padding: 0 10rem;
+          h3{
+            color: $dull__blue;
+            font-size: $xlr;
+            font-weight: 900;
+          }
+          p{
+            @include media(sm){
+              font-size: 2.52rem;
+            }
+            padding: 3.2rem 0;
+            font-size: 2rem;
+            font-family: $body__font;
+            color: $dark__grayish__blue;
+            line-height: 1.66;
+            margin-bottom: 1.5rem;
+          }
+          button{
+            border: none;
+            background: none;
+          }
+        }
+      }
+      &__left{
+        flex: .5;
+        order: 1;
+        background-image: url("./images/mobile/image-stand-out.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        background-size: 100% 100% ,100% 100%;
+        background-position: 50% 50%, 0% 0%;
+      }
+  }
+  .graphic,
+  .photography{
+    @include media(sm){
+      grid-column: 1/13;
+      height: 87.5rem;
+      padding: 5rem 2.6rem;
+    }
+    justify-content: flex-end;
+    padding: 4.5rem;
+    background-image: url('./images/desktop/image-graphic-design.jpg');
+    background-position: center top;
+    grid-column: span 6;
+    flex-direction: column;
+    text-align: center;
+    color: $dull__cyan;
+    h4{
+      @include media(sm){
+        font-size: $xlr;
+      }
+      font-weight: 900;
+    }
+    p{
+      @include media(sm){
+        max-width: 100%;
+        font-size: 2.56rem;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      max-width: 60%;
+      font-family: $body__font;
+      font-size: 2rem;
+      padding: 3.2rem .2rem;
+      line-height: 1.55;
+      font-weight: 600;
+      color: $dull__cyan;
+    }
+  }
+  .photography{
+    background-image: url("./images/desktop/image-photography.jpg");
+    color: $dark__blue;
+    p{
+      color: $dark__blue;
+    }
+  }
+}
