@@ -142,7 +142,8 @@ a {
 }
 
 .nav {
-  padding: 3rem 6rem;
+  position: relative;
+  padding: 4rem 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +162,7 @@ a {
 }
 
 .nav__left img {
-  height: 3.4rem;
+  height: 4rem;
 }
 
 @media (min-width: 320px) and (max-width: 478px) {
@@ -178,6 +179,10 @@ a {
   .nav__right .menu {
     display: block;
   }
+}
+
+.nav__right .menu.active {
+  opacity: .53;
 }
 
 .nav__right .links {
@@ -198,6 +203,40 @@ a {
   }
 }
 
+.nav__right .links.open {
+  position: absolute;
+  top: 125%;
+  left: 6%;
+  width: 88%;
+  height: 49rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  padding: 4rem 0 0 0;
+}
+
+.nav__right .links.open::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 4rem solid white;
+  border-left: 4rem solid transparent;
+  top: -8%;
+  right: 0%;
+}
+
 .nav__right .links li {
   list-style: none;
   padding: 0 2.8rem;
@@ -207,11 +246,24 @@ a {
   cursor: pointer;
 }
 
+@media (min-width: 320px) and (max-width: 478px) {
+  .nav__right .links li {
+    padding: 2.5rem 0;
+  }
+}
+
 .nav__right .links li a {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: "Barlow", cursive;
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 478px) {
+  .nav__right .links li a {
+    color: #818498;
+    font-size: 3.299rem;
+  }
 }
 
 .nav__right .links button {
@@ -221,8 +273,25 @@ a {
   font-family: "Fraunces", sans-serif;
   background-color: white;
   border: none;
-  border-radius: 2rem;
-  padding: 1.5rem 2.5rem;
+  border-radius: 2.5rem;
+  padding: 1.5rem 2.8rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 320px) and (max-width: 478px) {
+  .nav__right .links button {
+    background-color: #fad400;
+    margin-left: 0;
+    margin-top: 3.7rem;
+    font-size: 2.8rem;
+    padding: 2.8rem 4.3rem;
+    border-radius: 4.5rem;
+  }
+}
+
+.nav__right .links button:hover {
+  background-color: rgba(255, 255, 255, 0.281);
+  color: white;
 }
 
 footer {
@@ -249,7 +318,7 @@ footer .logo {
 }
 
 footer .links {
-  padding: 7.3rem 0 10rem 0;
+  padding: 5.2rem 0 7.7rem 0;
 }
 
 footer .links a {
@@ -257,12 +326,18 @@ footer .links a {
   margin: 0 3rem;
   color: #458c7e;
   font-size: 2.2rem;
+  -webkit-transition: color 100ms ease-out;
+  transition: color 100ms ease-out;
 }
 
 @media (min-width: 320px) and (max-width: 478px) {
   footer .links a {
     font-size: 2.8rem;
   }
+}
+
+footer .links a:hover {
+  color: white;
 }
 
 footer .icons {
@@ -278,8 +353,16 @@ footer .icons {
           justify-content: center;
 }
 
-footer .icons .icon {
+footer .icons i {
+  color: #458c7e;
   padding: 0 1.21rem;
+  cursor: pointer;
+  -webkit-transition: color 100ms ease-out;
+  transition: color 100ms ease-out;
+}
+
+footer .icons i:hover {
+  color: white;
 }
 
 .hero {
@@ -336,12 +419,12 @@ footer .icons .icon {
 }
 
 .hero .hero__content img {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 @media (min-width: 320px) and (max-width: 478px) {
   .hero .hero__content img {
-    margin-top: 0;
+    margin-top: 1.3rem;
   }
 }
 
@@ -415,7 +498,7 @@ footer .icons .icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 85vh;
+  height: 100vh;
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1/13;
@@ -428,7 +511,6 @@ footer .icons .icon {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100vh;
   }
 }
 
@@ -482,6 +564,7 @@ footer .icons .icon {
 .projects .transform__left .content button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .projects .transform__right {
@@ -558,6 +641,7 @@ footer .icons .icon {
 .projects .stand__out__right .content button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .projects .stand__out__left {
@@ -617,7 +701,7 @@ footer .icons .icon {
 
 .projects .graphic p,
 .projects .photography p {
-  max-width: 60%;
+  max-width: 65%;
   font-family: "Barlow", cursive;
   font-size: 2rem;
   padding: 3.2rem .2rem;

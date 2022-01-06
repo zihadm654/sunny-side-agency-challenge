@@ -9,6 +9,7 @@
 
   <title>Frontend Mentor | Sunnyside agency landing page</title>
   <link rel="stylesheet" href="./index.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -120,20 +121,29 @@
       <a href="#">Projects</a>
     </div>
     <div class="icons">
-      <div class="fb icon">
-        <img src="./images/icon-facebook.svg" alt="fb">
-      </div>
-      <div class="insta icon">
-        <img src="./images/icon-instagram.svg" alt="instagram">
-      </div>
-      <div class="tweet icon">
-        <img src="./images/icon-twitter.svg" alt="twitter">
-      </div>
-      <div class="pins icon">
-        <img src="./images/icon-pinterest.svg" alt="pinster">
-      </div>
+      <i class='bx bxl-facebook-square bx-lg fb'></i>
+      <i class='bx bxl-instagram bx-lg insta'></i>
+      <i class='bx bxl-twitter bx-lg twitter'></i>
+      <i class='bx bxl-pinterest bx-lg pins'></i>
     </div>
   </footer>
+  <script>
+    const menu = document.querySelector(".menu")
+    const menuBar = document.querySelector(".links")
+
+    menu.addEventListener("click", () => {
+      menu ? menu.classList.toggle("active") : null
+      menu ? menuBar.classList.toggle("open") : null
+      // if (menu.classList.contains("menu")) {
+      //   menu.classList.add("close")
+      //   menuBar.classList.add("open")
+      // } else if (menu.classList.contains("close")) {
+      //   menu.classList.add("active")
+      //   menu.classList.remove("close")
+      //   menuBar.classList.remove("open")
+      // }
+    })
+  </script>
 </body>
 
 </html>

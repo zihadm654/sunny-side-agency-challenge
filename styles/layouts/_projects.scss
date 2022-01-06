@@ -6,9 +6,8 @@
     @include flex(center);
     @include media(sm){
       flex-direction: column;
-      height: 100vh;
     }
-    height: 85vh;
+    height: 100vh;
     grid-column: 1/13;
     overflow: hidden;
   }
@@ -44,6 +43,7 @@
           button{
             border: none;
             background: none;
+            cursor: pointer;
           }
         }
       }
@@ -95,6 +95,7 @@
           button{
             border: none;
             background: none;
+            cursor: pointer;
           }
         }
       }
@@ -137,7 +138,7 @@
         font-weight: 600;
         line-height: 1.4;
       }
-      max-width: 60%;
+      max-width: 65%;
       font-family: $body__font;
       font-size: 2rem;
       padding: 3.2rem .2rem;
