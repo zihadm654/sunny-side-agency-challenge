@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-position: 100% 60% , 100% 100%;
   .hero__content{
-    padding-top: 3rem;
+    padding-top: 2rem;
     @include flex(center);
     flex-direction: column;
     h2 {
@@ -24,7 +24,8 @@
       font-weight: 900;
     }
     img{
-      margin-top: 1.3rem;
+      
+      margin-top: 2rem;
     }
   }
 }
