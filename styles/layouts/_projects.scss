@@ -6,8 +6,9 @@
     @include flex(center);
     @include media(sm){
       flex-direction: column;
+      height: 126vh;
     }
-    height: 100vh;
+    height: 75vh;
     grid-column: 1/13;
     overflow: hidden;
   }
@@ -33,7 +34,7 @@
             @include media(sm){
               font-size: 2.52rem;
             }
-            padding: 3.2rem 0;
+            padding: 3rem 0;
             font-size: 2rem;
             font-family: $body__font;
             color: $dark__grayish__blue;
@@ -113,9 +114,11 @@
   .graphic,
   .photography{
     @include media(sm){
+    background-image: url('./images/mobile/image-graphic-design.jpg');
       grid-column: 1/13;
-      height: 87.5rem;
+      height: 95vh;
       padding: 5rem 2.6rem;
+      background-size: cover;
     }
     justify-content: flex-end;
     padding: 4.5rem;
@@ -149,6 +152,9 @@
     }
   }
   .photography{
+    @include media(sm){
+    background-image: url("./images/mobile/image-photography.jpg");
+    }
     background-image: url("./images/desktop/image-photography.jpg");
     color: $dark__blue;
     p{
